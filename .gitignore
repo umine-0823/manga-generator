@@ -41,3 +41,7 @@ Thumbs.db
 # Local
 uploads/
 *.log
+
+# ngrok
+ngrok
+ngrok.zip
