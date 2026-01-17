@@ -593,6 +593,23 @@
             <p>画像を生成中...</p>
         </div>
 
+        <!-- Prompt Display Section -->
+        <div class="section prompt-display" id="promptDisplay" style="display: none;">
+            <h2>📝 生成プロンプト</h2>
+
+            <div class="prompt-area">
+                <h3>生成プロンプト (English)</h3>
+                <textarea id="englishPrompt" readonly rows="8"></textarea>
+                <button class="btn btn-secondary copy-btn" onclick="copyPrompt('english')">📋 英語をコピー</button>
+            </div>
+
+            <div class="prompt-area">
+                <h3>設定・構成メモ (日本語)</h3>
+                <textarea id="japaneseSettings" readonly rows="10"></textarea>
+                <button class="btn btn-secondary copy-btn" onclick="copyPrompt('japanese')">📋 日本語をコピー</button>
+            </div>
+        </div>
+
         <!-- Image Stock -->
         <div class="section">
             <h2>画像ストック</h2>
