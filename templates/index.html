@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>まんがジェネレーター</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="apple-touch-icon" href="{{ url_for('static', filename='icon.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='icon.png') }}?v=2">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='icon.png') }}?v=2">
     <link rel="manifest" href="{{ url_for('static', filename='../manifest.json') }}">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -82,14 +83,14 @@
                 <label for="distance">距離・範囲</label>
                 <select id="distance">
                     <option value="指定なし">指定なし</option>
-                    <option value="超接写/マクロ">超接写/マクロ</option>
-                    <option value="顔のアップ">顔のアップ</option>
-                    <option value="バストアップ">バストアップ</option>
-                    <option value="ウェストアップ">ウェストアップ</option>
-                    <option value="ニーアップ/膝上">ニーアップ/膝上</option>
-                    <option value="全身">全身</option>
-                    <option value="ロングショット/遠景">ロングショット/遠景</option>
-                    <option value="超遠景/ワイドショット">超遠景/ワイドショット</option>
+                    <option value="超接写/マクロ">超接写/マクロ（細部を大きく映す）</option>
+                    <option value="顔のアップ">顔のアップ（顔全体）</option>
+                    <option value="バストアップ">バストアップ（胸から上）</option>
+                    <option value="ウェストアップ">ウェストアップ（腰から上）</option>
+                    <option value="ニーアップ/膝上">ニーアップ/膝上（膝から上）</option>
+                    <option value="全身">全身（頭から足まで）</option>
+                    <option value="ロングショット/遠景">ロングショット/遠景（周囲含む引き）</option>
+                    <option value="超遠景/ワイドショット">超遠景/ワイドショット（広い範囲）</option>
                 </select>
             </div>
 
@@ -97,13 +98,13 @@
                 <label for="angle">アングル</label>
                 <select id="angle">
                     <option value="指定なし">指定なし</option>
-                    <option value="アイレベル">アイレベル</option>
-                    <option value="ローアングル/煽り">ローアングル/煽り</option>
-                    <option value="ワームズアイ/虫の目線">ワームズアイ/虫の目線</option>
-                    <option value="ハイアングル/俯瞰">ハイアングル/俯瞰</option>
-                    <option value="バーズアイ/鳥の目線">バーズアイ/鳥の目線</option>
-                    <option value="トップダウン/真上">トップダウン/真上</option>
-                    <option value="ダッチアングル">ダッチアングル</option>
+                    <option value="アイレベル">アイレベル（目線の高さ）</option>
+                    <option value="ローアングル/煽り">ローアングル/煽り（下から見上げる）</option>
+                    <option value="ワームズアイ/虫の目線">ワームズアイ/虫の目線（極端に低い位置から）</option>
+                    <option value="ハイアングル/俯瞰">ハイアングル/俯瞰（上から見下ろす）</option>
+                    <option value="バーズアイ/鳥の目線">バーズアイ/鳥の目線（高い位置から）</option>
+                    <option value="トップダウン/真上">トップダウン/真上（真上から見下ろす）</option>
+                    <option value="ダッチアングル">ダッチアングル（カメラを傾ける）</option>
                 </select>
             </div>
 
@@ -111,11 +112,11 @@
                 <label for="lens">レンズ・効果</label>
                 <select id="lens">
                     <option value="指定なし">指定なし</option>
-                    <option value="魚眼レンズ">魚眼レンズ</option>
-                    <option value="広角レンズ">広角レンズ</option>
-                    <option value="望遠レンズ/圧縮効果">望遠レンズ/圧縮効果</option>
-                    <option value="被写界深度/背景ボケ">被写界深度/背景ボケ</option>
-                    <option value="モーションブラー">モーションブラー</option>
+                    <option value="魚眼レンズ">魚眼レンズ（歪んだ広角）</option>
+                    <option value="広角レンズ">広角レンズ（広い範囲を撮影）</option>
+                    <option value="望遠レンズ/圧縮効果">望遠レンズ/圧縮効果（遠近感圧縮）</option>
+                    <option value="被写界深度/背景ボケ">被写界深度/背景ボケ（後ろをぼかす）</option>
+                    <option value="モーションブラー">モーションブラー（動きのブレ）</option>
                 </select>
             </div>
 
@@ -123,9 +124,9 @@
                 <label for="multiPerson">多人数・関係</label>
                 <select id="multiPerson">
                     <option value="指定なし">指定なし</option>
-                    <option value="ツーショット">ツーショット</option>
-                    <option value="肩越し/OTS">肩越し/OTS</option>
-                    <option value="背中合わせ">背中合わせ</option>
+                    <option value="ツーショット">ツーショット（2人を同時に映す）</option>
+                    <option value="肩越し/OTS">肩越し/OTS（相手の肩越しに見る）</option>
+                    <option value="背中合わせ">背中合わせ（背中を向き合う）</option>
                 </select>
             </div>
 
@@ -133,11 +134,11 @@
                 <label for="special">特殊演出</label>
                 <select id="special">
                     <option value="指定なし">指定なし</option>
-                    <option value="シルエット">シルエット</option>
-                    <option value="アイソメトリック">アイソメトリック</option>
-                    <option value="セルフィー/自撮り">セルフィー/自撮り</option>
-                    <option value="リフレクション/反射">リフレクション/反射</option>
-                    <option value="パースペクティブ強調">パースペクティブ強調</option>
+                    <option value="シルエット">シルエット（影絵風）</option>
+                    <option value="アイソメトリック">アイソメトリック（等角投影図）</option>
+                    <option value="セルフィー/自撮り">セルフィー/自撮り（自分撮り風）</option>
+                    <option value="リフレクション/反射">リフレクション/反射（鏡映し）</option>
+                    <option value="パースペクティブ強調">パースペクティブ強調（遠近感強調）</option>
                 </select>
             </div>
         </div>
@@ -207,21 +208,21 @@
                         <label>顔の向き</label>
                         <select class="char-face-direction" data-char="1">
                             <option value="指定なし">指定なし</option>
-                            <option value="正面/カメラ目線">正面/カメラ目線</option>
-                            <option value="斜め向き(右)">斜め向き(右)</option>
-                            <option value="斜め向き(左)">斜め向き(左)</option>
-                            <option value="横顔(右)">横顔(右)</option>
-                            <option value="横顔(左)">横顔(左)</option>
-                            <option value="背面/後頭部">背面/後頭部</option>
-                            <option value="振り返る">振り返る</option>
-                            <option value="見上げる">見上げる</option>
-                            <option value="俯く">俯く</option>
-                            <option value="小首をかしげる">小首をかしげる</option>
-                            <option value="顎を上げる">顎を上げる</option>
-                            <option value="顎を引く">顎を引く</option>
-                            <option value="視線を逸らす">視線を逸らす</option>
-                            <option value="目を閉じる">目を閉じる</option>
-                            <option value="お互いを見る">お互いを見る</option>
+                            <option value="正面/カメラ目線">正面/カメラ目線（真正面）</option>
+                            <option value="斜め向き(右)">斜め向き(右)（やや右向き）</option>
+                            <option value="斜め向き(左)">斜め向き(左)（やや左向き）</option>
+                            <option value="横顔(右)">横顔(右)（完全に右向き）</option>
+                            <option value="横顔(左)">横顔(左)（完全に左向き）</option>
+                            <option value="背面/後頭部">背面/後頭部（後ろ向き）</option>
+                            <option value="振り返る">振り返る（後ろを振り向く）</option>
+                            <option value="見上げる">見上げる（上を見る）</option>
+                            <option value="俯く">俯く（下を向く）</option>
+                            <option value="小首をかしげる">小首をかしげる（首を傾ける）</option>
+                            <option value="顎を上げる">顎を上げる（偉そうに）</option>
+                            <option value="顎を引く">顎を引く（控えめに）</option>
+                            <option value="視線を逸らす">視線を逸らす（目を合わせない）</option>
+                            <option value="目を閉じる">目を閉じる（目をつぶる）</option>
+                            <option value="お互いを見る">お互いを見る（見つめ合う）</option>
                         </select>
                     </div>
 
@@ -256,11 +257,11 @@
                         <label>方向・視点</label>
                         <select class="char-direction" data-char="1">
                             <option value="指定なし">指定なし</option>
-                            <option value="正面">正面</option>
-                            <option value="横顔/サイドビュー">横顔/サイドビュー</option>
-                            <option value="斜め向き">斜め向き</option>
-                            <option value="後ろ姿">後ろ姿</option>
-                            <option value="主観視点">主観視点</option>
+                            <option value="正面">正面（真正面から）</option>
+                            <option value="横顔/サイドビュー">横顔/サイドビュー（真横から）</option>
+                            <option value="斜め向き">斜め向き（斜め方向から）</option>
+                            <option value="後ろ姿">後ろ姿（背中側から）</option>
+                            <option value="主観視点">主観視点（一人称視点）</option>
                         </select>
                     </div>
 
@@ -268,13 +269,13 @@
                         <label>配置・構図</label>
                         <select class="char-composition" data-char="1">
                             <option value="指定なし">指定なし</option>
-                            <option value="三分割法">三分割法</option>
-                            <option value="日の丸構図/センター配置">日の丸構図/センター配置</option>
-                            <option value="シンメトリー/対称">シンメトリー/対称</option>
-                            <option value="リーディングライン">リーディングライン</option>
-                            <option value="ネガティブスペース/余白">ネガティブスペース/余白</option>
-                            <option value="黄金比">黄金比</option>
-                            <option value="フレーム・イン・フレーム">フレーム・イン・フレーム</option>
+                            <option value="三分割法">三分割法（交点に配置する基本構図）</option>
+                            <option value="日の丸構図/センター配置">日の丸構図/センター配置（中央配置）</option>
+                            <option value="シンメトリー/対称">シンメトリー/対称（左右対称）</option>
+                            <option value="リーディングライン">リーディングライン（視線誘導線）</option>
+                            <option value="ネガティブスペース/余白">ネガティブスペース/余白（空間を活かす）</option>
+                            <option value="黄金比">黄金比（美的比率）</option>
+                            <option value="フレーム・イン・フレーム">フレーム・イン・フレーム（枠の中の枠）</option>
                         </select>
                     </div>
 
@@ -282,11 +283,11 @@
                         <label>ライティング</label>
                         <select class="char-lighting" data-char="1">
                             <option value="指定なし">指定なし</option>
-                            <option value="逆光">逆光</option>
-                            <option value="リムライト">リムライト</option>
-                            <option value="サイドライト">サイドライト</option>
-                            <option value="レンブラントライト">レンブラントライト</option>
-                            <option value="ボリューメトリックライト">ボリューメトリックライト</option>
+                            <option value="逆光">逆光（後ろから光）</option>
+                            <option value="リムライト">リムライト（輪郭が光る）</option>
+                            <option value="サイドライト">サイドライト（横から光）</option>
+                            <option value="レンブラントライト">レンブラントライト（斜め45度の光）</option>
+                            <option value="ボリューメトリックライト">ボリューメトリックライト（光の筋）</option>
                         </select>
                     </div>
                 </div>

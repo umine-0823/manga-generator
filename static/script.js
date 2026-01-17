@@ -1,3 +1,24 @@
+// API Key localStorage management
+const apiKeyInput = document.getElementById('apiKey');
+
+// Load API key from localStorage on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedApiKey = localStorage.getItem('geminiApiKey');
+    if (savedApiKey) {
+        apiKeyInput.value = savedApiKey;
+    }
+});
+
+// Save API key to localStorage when user types
+apiKeyInput.addEventListener('input', (e) => {
+    const apiKey = e.target.value;
+    if (apiKey) {
+        localStorage.setItem('geminiApiKey', apiKey);
+    } else {
+        localStorage.removeItem('geminiApiKey');
+    }
+});
+
 // Toggle accordion
 function toggleAccordion(header) {
     const content = header.nextElementSibling;
